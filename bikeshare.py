@@ -39,11 +39,11 @@ def get_filters():
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
-        day = input ('please enter the day: ').lower()
+        day = input ('please enter the day:select sunday, monday, tuesday, wednesday, thursday, friday, saturday, all:  ').lower()
         if day in days_of_week:
             break
         else:
-            print('Please check your input, select sunday, monday, tuesday, wednesday, thursday, friday, saturday, all: ')
+            print('Please check your input, ')
 
 
     print('-'*40)
