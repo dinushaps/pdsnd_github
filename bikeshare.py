@@ -22,7 +22,7 @@ def get_filters():
     days_of_week = ['sunday', 'monday', 'tuesday', 'wednesday','thursday', 'friday', 'saturday', 'all']
 
     while True:
-        city = input ('Please enter your preffered city from- Chicago, New york city, Washington: '). lower()
+        city = input ('Please enter the city- Chicago, New york city, Washington: '). lower()
         if city in cities:
             break
         else:
@@ -39,11 +39,11 @@ def get_filters():
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
-        day = input ('please enter the day: ').lower()
+        day = input ('please enter the day:select sunday, monday, tuesday, wednesday, thursday, friday, saturday, all:  ').lower()
         if day in days_of_week:
             break
         else:
-            print('Please check your input, select sunday, monday, tuesday, wednesday, thursday, friday, saturday, all: ')
+            print('Please check your input, ')
 
 
     print('-'*40)
@@ -124,9 +124,9 @@ def station_stats(df):
     print('most commonly used end station: ', end_station)
 
     # TO DO: display most frequent combination of start station and end station trip
-    df['start_end_station'] = df['Start Station'] + ', ' + df ['End Station']
-    start_end_station = df['start_end_station'].mode()[0]
-    print('most frequent combination of start and end station: ', start_end_station)
+    df['station_combination'] = df['Start Station'] + ', ' + df ['End Station']
+    popular_station_combination = df['station_combination'].mode()[0]
+    print('most frequent combination of start and end station: ', populart_station_combination)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
