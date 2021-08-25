@@ -22,7 +22,7 @@ def get_filters():
     days_of_week = ['sunday', 'monday', 'tuesday', 'wednesday','thursday', 'friday', 'saturday', 'all']
 
     while True:
-        city = input ('Please enter your preffered city from- Chicago, New york city, Washington: '). lower()
+        city = input ('Please enter the city- Chicago, New york city, Washington: '). lower()
         if city in cities:
             break
         else:
